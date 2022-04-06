@@ -1,3 +1,6 @@
+# iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/codepls/Public/main/Fix_WindowsStoreAppMissing.ps1'))
+
+
 $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
 $session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.55"
 $session.Cookies.Add((New-Object System.Net.Cookie("_ga", "GA1.2.191647889.1648768294", "/", ".rg-adguard.net")))
