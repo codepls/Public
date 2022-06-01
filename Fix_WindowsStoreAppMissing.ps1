@@ -51,3 +51,5 @@ Add-AppxPackage -Path C:\MicrosoftStore.AppxBundle
 Get-AppXPackage -AllUsers -Name Microsoft.WindowsStore | ForEach-Object {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml" -Verbose}
 }
 }
+
+#test change
