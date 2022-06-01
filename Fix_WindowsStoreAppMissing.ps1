@@ -48,6 +48,6 @@ if($link -like "*.AppxBundle*"){
 Invoke-WebRequest -Uri $link.href -OutFile C:\MicrosoftStore.AppxBundle -UseBasicParsing
 Get-AppxPackage *WindowsStore* | Remove-AppxPackage
 Add-AppxPackage -Path C:\MicrosoftStore.AppxBundle
-Get-AppXPackage -AllUsers -Name Microsoft.WindowsStore | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml" -Verbose}
+Get-AppXPackage -AllUsers -Name Microsoft.WindowsStore | ForEach-Object {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml" -Verbose}
 }
 }
