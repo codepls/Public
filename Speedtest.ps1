@@ -3,7 +3,7 @@ Clear-Host
 
 $DownloadURL = "https://install.speedtest.net/app/cli/ookla-speedtest-1.0.0-win64.zip"
 #location to save on the computer. Path must exist or it will error
-$DOwnloadPath = "c:\temp\SpeedTest.Zip"
+$DownloadPath = "c:\temp\SpeedTest.Zip"
 $ExtractToPath = "c:\temp\SpeedTest"
 $SpeedTestEXEPath = "C:\temp\SpeedTest\speedtest.exe"
 #Log File Path
@@ -34,7 +34,7 @@ else
     Write-Host "SpeedTest EXE Doesn't Exist, starting file download"
 
     #downloads the file from the URL
-    Invoke-WebRequest $DownloadURL -outfile $DOwnloadPath
+    Invoke-WebRequest $DownloadURL -outfile $DownloadPath
 
     #Unzip the file
     Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -45,7 +45,7 @@ else
         [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
     }
 
-    Unzip $DOwnloadPath $ExtractToPath
+    Unzip $DownloadPath $ExtractToPath
     RunTest
 }
 
