@@ -1,1 +1,1 @@
-iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/codepls/Public/main/Fix_WindowsStoreAppMissing.ps1'))
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/codepls/Public/refs/heads/main/choco.ps1'))
